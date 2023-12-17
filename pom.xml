@@ -13,10 +13,13 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-  	<module>application</module>
+  	<module>users-service</module>
   	<module>persistence</module>
   	<module>rest</module>
   	<module>persistence-proxy</module>
+  	<module>messages</module>
+  	<module>roles-service</module>
+  	<module>permissions-service</module>
   </modules>
   
   <dependencies>

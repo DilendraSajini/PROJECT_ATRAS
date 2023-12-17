@@ -73,7 +73,13 @@
 		</dependency>
 			  <dependency>
 			<groupId>org.atras</groupId>
-			<artifactId>application</artifactId>
+			<artifactId>users-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+			  <dependency>
+			<groupId>org.atras</groupId>
+			<artifactId>roles-service</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>compile</scope>
 		</dependency>

@@ -6,7 +6,6 @@ import org.atras.persistence.UserDBRepository;
 import org.atras.ports.in.CreateRolesUseCase;
 import org.atras.ports.in.CreateUsersUseCase;
 import org.atras.ports.in.DeleteUsersUseCase;
-import org.atras.ports.in.FindAllIntegersUseCase;
 import org.atras.ports.in.FindRolesUseCase;
 import org.atras.ports.in.FindUsersUseCase;
 import org.atras.ports.out.DataServiceRepository;
@@ -20,7 +19,6 @@ import org.atras.proxy.UserRepositoryImpl;
 import org.atras.services.CreateRolesUseCaseImpl;
 import org.atras.services.CreateUsersUseCaseImpl;
 import org.atras.services.DeleteUsersUseCaseImpl;
-import org.atras.services.FindAllIntegersUseCaseImpl;
 import org.atras.services.FindRolesUseCaseImpl;
 import org.atras.services.FindUsersUseCaseImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -106,11 +104,6 @@ public class RestServiceApplication {
 	@Bean(name = "findRolesUseCase")
 	public FindRolesUseCase findRolesUseCase() {
 		return new FindRolesUseCaseImpl(roleRepository());
-	}
-	
-	@Bean(name = "findAllIntegersUseCase")
-	public FindAllIntegersUseCase findAllIntegersUseCase() {
-		return new FindAllIntegersUseCaseImpl(dataService);
 	}
 	
 	@Bean
