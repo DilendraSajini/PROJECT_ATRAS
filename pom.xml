@@ -13,13 +13,14 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-  	<module>users-service</module>
-  	<module>persistence</module>
-  	<module>rest</module>
-  	<module>persistence-proxy</module>
-  	<module>messages</module>
-  	<module>roles-service</module>
-  	<module>permissions-service</module>
+  	<module>atras-services-users</module>
+  	<module>atras-persistence</module>
+  	<module>atras-rest-api</module>
+  	<module>atras-persistence-proxy</module>
+  	<module>atras-messages</module>
+  	<module>atras-services-roles</module>
+  	<module>atras-services-permissions</module>
+  	<module>atras-services-core</module>
   </modules>
   
   <dependencies>
