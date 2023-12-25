@@ -6,4 +6,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>atras-services-core</artifactId>
+   <properties>
+		<java.version>17</java.version>
+	</properties>
 </project>

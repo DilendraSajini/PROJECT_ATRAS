@@ -1,3 +1,3 @@
-insert into permission values(1,'read');
-insert into permission values(2,'write');
-insert into permission values(3,'both');
+insert into permission values('read');
+insert into permission values('write');
+insert into permission values('both');

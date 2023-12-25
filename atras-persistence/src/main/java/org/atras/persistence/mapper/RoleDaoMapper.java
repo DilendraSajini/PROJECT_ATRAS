@@ -2,7 +2,7 @@ package org.atras.persistence.mapper;
 
 import java.util.List;
 
-import org.atras.data.Role;
+import org.atras.core.data.Role;
 import org.atras.persistence.model.PermissionDao;
 import org.atras.persistence.model.RoleDao;
 

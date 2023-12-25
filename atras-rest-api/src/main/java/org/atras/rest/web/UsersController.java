@@ -3,10 +3,10 @@ package org.atras.rest.web;
 import java.net.URI;
 import java.util.List;
 
-import org.atras.data.User;
-import org.atras.ports.in.CreateUsersUseCase;
-import org.atras.ports.in.DeleteUsersUseCase;
-import org.atras.ports.in.FindUsersUseCase;
+import org.atras.core.data.User;
+import org.atras.users.ports.in.CreateUsersUseCase;
+import org.atras.users.ports.in.DeleteUsersUseCase;
+import org.atras.users.ports.in.FindUsersUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;

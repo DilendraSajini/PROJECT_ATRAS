@@ -1,7 +1,7 @@
 package org.atras.persistence.mapper;
 
 
-import org.atras.data.User;
+import org.atras.core.data.User;
 import org.atras.persistence.model.RoleDao;
 import org.atras.persistence.model.UserDao;
 
@@ -9,7 +9,7 @@ public class UserDaoMapper {
 	
 	
 	public static UserDao mapUsertoUserDao(User user, RoleDao roleDao) {
-		UserDao userDao = new UserDao.UserDaoBuilder().setUserName(user.getUsername()).setRole(roleDao).build();
+		UserDao userDao = new UserDao.UserDaoBuilder().setUserName(user.getUsername()).setPassword(user.getPassword()).setRole(roleDao).build();
 		return userDao;
 	}
 	

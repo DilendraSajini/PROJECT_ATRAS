@@ -1,6 +1,6 @@
 package org.atras.persistence.mapper;
 
-import org.atras.data.User;
+import org.atras.core.data.User;
 import org.atras.persistence.model.PermissionDao;
 
 public class PermissionDaoMapper {

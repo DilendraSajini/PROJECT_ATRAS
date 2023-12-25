@@ -1,5 +1,6 @@
 package org.atras.persistence.model;
 
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,6 +9,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
+
+import org.atras.persistence.encryption.EncryptionConverter;
 
 //neeed to use single quote in sql table
 @Entity
@@ -20,6 +23,10 @@ public class UserDao{
 
 	@Size(min = 2, message = "User name should have atleast 2 characters")
 	private String username;
+	
+	@Size(min = 2, message = "User namePassword should have atleast 2 characters")
+	@Convert(converter = EncryptionConverter.class)
+	private String password;
 
 	@ManyToOne // FetchType.LAZY is the default, need to add in @JoinColumn side  cascade = { CascadeType.PERSIST, CascadeType.MERGE }
 	@JoinColumn(name = "roleId") // This is the foreign key column in USER table
@@ -29,13 +36,18 @@ public class UserDao{
 
 	}
 
-	public UserDao(String username, RoleDao role) {
+	public UserDao(String username,String password, RoleDao role) {
 		this.username = username;
 		this.role = role;
+		this.password = password;
 	}
 
 	public String getUsername() {
 		return username;
+	}
+	
+	public String getPassword() {
+		return password;
 	}
 
 	public RoleDao getRole() {
@@ -50,6 +62,7 @@ public class UserDao{
 
 		private String username;
 		private RoleDao role;
+		private String password;
 
 		public UserDaoBuilder setUserName(String userName) {
 			this.username = userName;
@@ -60,9 +73,14 @@ public class UserDao{
 			this.role = role;
 			return this;
 		}
+		
+		public UserDaoBuilder setPassword(String password) {
+			this.password = password;
+			return this;
+		}
 
 		public UserDao build() {
-			return new UserDao(username, role);
+			return new UserDao(username,password, role);
 		}
 	}
 

@@ -20,6 +20,18 @@
 		</dependency>
 		<dependency>
 			<groupId>org.atras</groupId>
+			<artifactId>atras-services-permissions</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.atras</groupId>
+			<artifactId>atras-services-roles</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.atras</groupId>
 			<artifactId>atras-persistence</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>compile</scope>

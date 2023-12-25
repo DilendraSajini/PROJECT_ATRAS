@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoggingAspect{
 
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(LoggingAspect.class);
 			
 	@Pointcut("@annotation(Loggable)")

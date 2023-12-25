@@ -3,9 +3,9 @@ package org.atras.rest.web;
 import java.net.URI;
 import java.util.List;
 
-import org.atras.data.Role;
-import org.atras.ports.in.CreateRolesUseCase;
-import org.atras.ports.in.FindRolesUseCase;
+import org.atras.core.data.Role;
+import org.atras.roles.ports.in.CreateRolesUseCase;
+import org.atras.roles.ports.in.FindRolesUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
