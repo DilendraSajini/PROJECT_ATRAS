@@ -33,7 +33,6 @@ public class SpecialUserRepositoryImpl implements UserRepository {
 	}
 	
 	@Override
-	@Transactional
 	public User findUsersById(Integer userId) {
 		Optional<UserDao> user = userRepository.findById(userId);
 		UserDao userDaoSaved;
@@ -46,7 +45,6 @@ public class SpecialUserRepositoryImpl implements UserRepository {
 	}
 
 	@Override
-	@Transactional
 	public List<User> findUsers() {
 		List<UserDao> listOfusers =  userRepository.findAll();
 		List<User> usersList = listOfusers.stream().map(userDao -> UserDaoMapper.mapUserDaotoUser(userDao)).collect(Collectors.toList());

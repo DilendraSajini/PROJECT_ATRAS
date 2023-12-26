@@ -24,7 +24,6 @@ public class RoleRepositoryImpl implements RoleRepository {
 	private PermissionRepositoryImpl permissionRepository;
 
 	@Override
-	@Transactional
 	public List<String> findRoles() {
 		List<RoleDao> listOfRoles = roleRepository.findAll();
 		List<String> rolesList = listOfRoles.stream().map(roleDao -> RoleDaoMapper.mapRoleDaotoRole(roleDao))
@@ -33,7 +32,6 @@ public class RoleRepositoryImpl implements RoleRepository {
 	}
 
 	@Override
-	@Transactional
 	public String findRolesById(Integer roleId) {
 		Optional<RoleDao> roleDao = roleRepository.findById(roleId);
 		String role;
@@ -47,7 +45,6 @@ public class RoleRepositoryImpl implements RoleRepository {
 		return role;
 	}
 
-	@Transactional
 	protected RoleDao findRolesByRole(String roleName) {
 		Optional<RoleDao> roleDao = roleRepository.getByRole(roleName);
 		RoleDao roleDaoSaved;
